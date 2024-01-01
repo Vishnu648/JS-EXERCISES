@@ -1,2 +1,2 @@
 exercises for javascript
-//athira
+//riswana
