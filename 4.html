@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Calculator</title>
+  </head>
+
+  <body>
+    <div style="text-align: center">
+      <h1>string parsing calculator</h1>
+      <input
+        style="text-align: center; font-size: 30px"
+        id="inp"
+        type="text"
+        placeholder="Enter value"
+        value="4SHDFJldf4"
+      />
+      <div id="err"></div>
+      <button style="font-size: larger" onclick="calculate()">Submit</button>
+    </div>
+
+    <script>
+      function calculate() {
+        const myElement = document.getElementById("inp").value;
+        const splitted = myElement.split(/(\d+)/);
+       
+        for(let strdata of splitted){
+         strdata= strdata.toLowerCase()
+        }
+        console.log("jhgdjhsdgfhjeg", splitted);
+        var status=true
+        var stringData=splitted.toString()
+        console.log(stringData);
+
+        if( stringData.includes("minus","plus","multipliedby","dividedby")==false){
+          document.getElementById("err").innerHTML = "Please enter valid expression";
+         }
+         const arrayData=Array.from(stringData)
+         console.log(arrayData);
+        for (let i = 0; i < splitted.length - 1; i++) {
+        
+          
+          if (splitted[i].toLowerCase() == "minus") {
+            splitted[i] = "-";
+            status=true
+          } else if (splitted[i].toLowerCase() == "plus") {
+            splitted[i] = "+";
+            status=true
+          } else if (splitted[i].toLowerCase() == "multipliedby") {
+            splitted[i] = "*";
+            status=true
+          } else if (splitted[i].toLowerCase() == "dividedby") {
+            splitted[i] = "/";
+            status=true
+          } 
+//           else if (splitted.toLowerCase().includes("minus","plus","multipliedby","dividedby")==false) {
+//             document.getElementById("err").innerHTML = "Please enter valid expression";
+// console.log("inside");
+//             status=false
+
+//           }
+         
+        }
+
+        let jjoin = splitted.join("");
+        try{
+          var result = eval(jjoin);
+          document.getElementById("inp").value = result ;
+        }
+        catch(err){
+          document.getElementById("err").innerHTML = "Please enter valid expression";
+        }
+        
+       
+        if(result){
+          document.getElementById("err").innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capital</title>
+  </head>
+
+  <body>
+    <input
+      type="text"
+      placeholder="Enter string..."
+      id="word"
+      value="name. sfd"
+      onchange="funName()"
+    />
+    <h2 id="capital">...</h2>
+
+    <script>
+      function funName() {
+        const word = document.getElementById("word").value;
+        const words = word.split(". ");
+        var finalWord = "";
+        for (let res of words) {
+          var capital = res[0].toUpperCase() + res.slice(1);
+          finalWord = finalWord + capital + ". ";
+        }
+        let n = finalWord.slice(0, -2);
+        // let n=finalWord.replace('.',' ')
+        document.getElementById("capital").innerText = n;
+      }
+    </script>
+  </body>
+</html>

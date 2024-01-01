@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <style>
+        .container{
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap:10px;
+            padding: 5px;
+        }
+        .box{
+            height: 320px;
+            width: 320px;
+            background-color: black;
+        }
+        @media (max-width: 768px) {
+            .box{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
