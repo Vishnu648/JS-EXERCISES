@@ -4,8 +4,10 @@
 
 const Greetings = (firstName, lastName) => {
   let fullName = `${firstName} ${lastName}`;
-  let greeting = `Hello ${fullName}`;
-  console.log(greeting);
+  let greeting = () => {
+    console.log("Hello", fullName);
+  };
+  return greeting();
 };
 
 Greetings("v", "s");
