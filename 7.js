@@ -1,34 +1,38 @@
 const GLConfig = {
-  CO: { type: "REQUIRED" },
-  MAJ: { type: "NORMAL" },
-  SET: { type: "NORMAL" },
-  MIN: { type: "REQUIRED" },
+    "CO": { type: "REQUIRED" },
+    "MAJ": { type: "NORMAL" },
+    "SET": { type: "NORMAL" },
+    "MIN": { type: "REQUIRED" }
 };
 
 const GLSegments = {
-  CO: "",
-  MAJ: "111",
-  SET: "111",
-  MIN: "000",
+    "CO": "",
+    "MAJ": "111",
+    "SET": "111",
+    "MIN": "000"
 };
+
+
+
+
 
 let validation = 0;
 
-for (let i in GLSegments) {
-  if (GLConfig[i].type == "REQUIRED") {
-    if (
-      GLSegments[i].length <= i.length &&
-      GLSegments[i] != undefined &&
-      GLSegments[i] != null &&
-      GLSegments[i] != ""
-    ) {
-      validation = 1;
+for (let i in GLConfig) {
+    if (GLConfig[i].type == "REQUIRED") {
+        if (GLSegments[i].length <= i.length && GLSegments[i] != "" && GLSegments[i] != undefined &&
+            GLSegments[i] != null) {
+            validation = 1;
+        }
+        else {
+            validation = 0;
+            break;
+        }
     }
-  }
 }
 
 if (validation == 1) {
-  console.log("-true");
+    console.log("-true");
 } else {
-  console.log("-false");
+    console.log("-false");
 }
