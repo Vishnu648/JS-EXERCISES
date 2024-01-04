@@ -1,0 +1,6 @@
+1. Input a value from the user. If value divisible by 3, log fuzz ,if divisible by 5 log buzz ,if divisible by both 3 and 5 log FuzzBuzz.
+2. Take age from the user. If age is above 18 log 'Eligible' message, else show a error message.
+3. Take 3 values, firstNumber,secondNumber and operator and log the result.(basic calculator).
+4. print 1 to 10, each with 1second delay.
+5. Create a callback hell, give 2 values to a function as arguement and use the sum of the 2 arguement as the first arguement for next callback.
+6. 
