@@ -3,4 +3,19 @@
 3. Take 3 values, firstNumber,secondNumber and operator and log the result.(basic calculator).
 4. print 1 to 10, each with 1second delay.
 5. Create a callback hell, give 2 values to a function as arguement and use the sum of the 2 arguement as the first arguement for next callback.
-6. 
+6. print  
+     *
+    * *
+   * * *
+  * * * *
+ * * * * *
+7. find the sum of values in a array without loop;
+8. a=10 b=20 swap value of variables without a third variable.
+9. sum of even numbers in a array.
+10. const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue"
+    };
+    copy the person and update the values without affecting the original person object .
